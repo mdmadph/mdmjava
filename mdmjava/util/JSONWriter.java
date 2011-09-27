@@ -1,4 +1,4 @@
-package mdmjava.util;
+package util;
 
 import java.io.PrintWriter;
 import lotus.domino.NotesException;
@@ -91,10 +91,6 @@ public class JSONWriter {
 	 */
 	public static void print(String param, Boolean value) {
 		printLine(param, Boolean.toString(value));
-	}
-	
-	public static void print(String param, String[] value) {
-		
 	}
 	
 	/**
