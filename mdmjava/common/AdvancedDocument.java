@@ -44,18 +44,45 @@ public class AdvancedDocument {
 		}	
 	}
 	
+	/**
+	 * Same as lotus.domino.Document
+	 * @param fieldName {String}
+	 * @param value {Object}
+	 * @return lotus.domino.Item
+	 * @throws NotesException
+	 */
 	public Item replaceItemValue(String fieldName, Object value) throws NotesException {
 		return this.doc.replaceItemValue(fieldName, value);
 	}
 	
+	/**
+	 * Same as lotus.domino.Document
+	 * @param ignoreThisVar {boolean}
+	 * @param raiseerror {boolean}
+	 * @return boolean
+	 * @throws NotesException
+	 */
 	public boolean computeWithForm(boolean ignoreThisVar, boolean raiseerror) throws NotesException {
 		return this.doc.computeWithForm(ignoreThisVar, raiseerror);
 	}
 	
+	/**
+	 * Same as lotus.domino.Document;
+	 * @return boolean
+	 * @throws NotesException
+	 */
 	public boolean save() throws NotesException {
 		return this.doc.save();
 	}
 	
+	/**
+	 * Same as lotus.domino.Document
+	 * @param force {boolean}
+	 * @param makeresponse {boolean}
+	 * @param makeread {boolean}
+	 * @return boolean
+	 * @throws NotesException
+	 */
 	public boolean save(boolean force, boolean makeresponse, boolean makeread) throws NotesException {
 		return this.save(force, makeresponse, makeread);
 	}
