@@ -5,7 +5,7 @@ import lotus.domino.Item;
 import lotus.domino.NotesException;
 
 /**
- * @author Michael McNamara
+ * @author mdm-adph
  * @alias AdvancedDocument
  */
 public class AdvancedDocument {
