@@ -5,7 +5,7 @@ import lotus.domino.Item;
 import lotus.domino.NotesException;
 
 /**
- * @author mdm-adph
+ * @author Michael McNamara
  * @alias AdvancedDocument
  */
 public class AdvancedDocument {
@@ -31,15 +31,16 @@ public class AdvancedDocument {
 	}
 	
 	/**
-	 * Set Document fields in bulk by passing a 2D array of field names and values
+	 * Set Document fields in bulk by passing a 2D array of field names and values;
+	 * field names should be strings, values are variable depending upon type of Notes item
 	 * @memberOf AdvancedDocument
-	 * @param values {String[][]}
+	 * @param values {Object[][]}
 	 * A 2D array of field names and values
 	 * @throws NotesException
 	 */
-	public void setDocValues(String[][] values) throws NotesException {
+	public void setDocValues(Object[][] values) throws NotesException {
 		for (int x = 0; x < values.length; x++) {
-			this.doc.replaceItemValue(values[x][0], values[x][1]);
+			this.doc.replaceItemValue((String)values[x][0], values[x][1]);
 		}	
 	}
 	
